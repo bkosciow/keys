@@ -1,0 +1,11 @@
+[Unit]
+Description=Keyboard
+After=multi-user.target
+ 
+[Service]
+User=pi
+Type=idle
+ExecStart=/usr/bin/python3 /usr/local/bin/keys.py
+
+[Install]
+WantedBy=multi-user.target
