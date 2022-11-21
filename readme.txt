@@ -2,7 +2,7 @@ Raspberry Pi or similar with Linux
 
 * Buttons server that uses named socket to send actions to other apps
 
-More:[url]
+More: https://koscis.wordpress.com/2022/11/21/the-keys-daemon/
 
 * clone repo, setup keys.ini
 

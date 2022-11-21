@@ -14,9 +14,12 @@ app_file = "/usr/local/bin/keys.py"
 def install():
     import shutil
     import subprocess
-    print("""Copy keys.ini to %s""" % ini_file)
-    os.makedirs(os.path.dirname(ini_file), exist_ok=True)
-    shutil.copy("keys.ini", ini_file)
+    if os.path.isfile(ini_file):
+        print("NOT coping keys.ini - already exists")
+    else:
+        print("""Copy keys.ini to %s""" % ini_file)
+        os.makedirs(os.path.dirname(ini_file), exist_ok=True)
+        shutil.copy("keys.ini", ini_file)
     print("""Copy keys.service to %s """ % service_file)
     shutil.copy("keys.service", service_file)
     print("""Copy self to %s """ % app_file)
